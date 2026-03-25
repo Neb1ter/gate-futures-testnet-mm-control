@@ -1,0 +1,58 @@
+services:
+  - type: web
+    name: gate-futures-testnet-mm
+    runtime: docker
+    plan: starter
+    region: singapore
+    dockerfilePath: ./paper_market_maker/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    disk:
+      name: gate-mm-data
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: HOST
+        value: "0.0.0.0"
+      - key: GATE_MM_AUTO_START
+        value: "true"
+      - key: GATE_MM_SERVICE_LOG_LEVEL
+        value: "INFO"
+      - key: GATE_MM_LOG_LEVEL
+        value: "INFO"
+      - key: GATE_MM_SETTLE
+        value: "usdt"
+      - key: GATE_MM_CONTRACT
+        value: "BTC_USDT"
+      - key: GATE_MM_BASE_URL
+        value: "https://fx-api-testnet.gateio.ws"
+      - key: GATE_MM_BASE_SPREAD_BPS
+        value: "18"
+      - key: GATE_MM_MIN_SPREAD_BPS
+        value: "8"
+      - key: GATE_MM_POSITION_SKEW_BPS
+        value: "16"
+      - key: GATE_MM_ORDER_SIZE_CONTRACTS
+        value: "1"
+      - key: GATE_MM_MAX_POSITION_CONTRACTS
+        value: "3"
+      - key: GATE_MM_LEVERAGE
+        value: "2"
+      - key: GATE_MM_LOOP_INTERVAL_SECONDS
+        value: "8"
+      - key: GATE_MM_REPRICE_TOLERANCE_BPS
+        value: "3"
+      - key: GATE_MM_MAX_ORDER_AGE_SECONDS
+        value: "25"
+      - key: GATE_MM_TRADE_POLL_INTERVAL_LOOPS
+        value: "3"
+      - key: GATE_MM_DATA_DIR
+        value: "/app/data"
+      - key: GATE_MM_ADMIN_TOKEN
+        generateValue: true
+      - key: GATE_MM_API_KEY
+        sync: false
+      - key: GATE_MM_API_SECRET
+        sync: false

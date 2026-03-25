@@ -1,0 +1,17 @@
+{
+  "api_key": "PASTE_YOUR_BINANCE_TESTNET_API_KEY",
+  "api_secret": "PASTE_YOUR_BINANCE_TESTNET_API_SECRET",
+  "symbol": "BTCUSDT",
+  "base_url": "https://testnet.binance.vision",
+  "target_base_ratio": 0.5,
+  "base_spread_bps": 45,
+  "min_spread_bps": 20,
+  "inventory_skew_bps_per_ratio": 80,
+  "order_quote_size": 25,
+  "loop_interval_seconds": 5,
+  "reprice_tolerance_bps": 12,
+  "max_order_age_seconds": 30,
+  "recv_window_ms": 5000,
+  "dry_run": false,
+  "log_level": "INFO"
+}

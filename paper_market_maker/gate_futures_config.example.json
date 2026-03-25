@@ -1,0 +1,20 @@
+{
+  "api_key": "PASTE_YOUR_GATE_FUTURES_TESTNET_API_KEY",
+  "api_secret": "PASTE_YOUR_GATE_FUTURES_TESTNET_API_SECRET",
+  "contract": "BTC_USDT",
+  "settle": "usdt",
+  "base_url": "https://fx-api-testnet.gateio.ws",
+  "base_spread_bps": 18,
+  "min_spread_bps": 8,
+  "position_skew_bps_per_max_position": 16,
+  "order_size_contracts": 1,
+  "max_position_contracts": 3,
+  "leverage": 2,
+  "loop_interval_seconds": 8,
+  "reprice_tolerance_bps": 3,
+  "max_order_age_seconds": 25,
+  "trade_poll_interval_loops": 3,
+  "dry_run": false,
+  "log_level": "INFO",
+  "data_dir": "paper_market_maker/data"
+}

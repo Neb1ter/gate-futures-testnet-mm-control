@@ -1,0 +1,3 @@
+paper_market_maker/data/
+paper_market_maker/*.local.json
+paper_market_maker/*.secret.json
